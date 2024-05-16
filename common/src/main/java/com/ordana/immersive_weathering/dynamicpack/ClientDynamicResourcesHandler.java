@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
+import java.util.function.Predicate;
 
 public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
 
@@ -113,7 +114,7 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
                 try {
                     ResourceLocation leavesTexture;
                     try {
-                        leavesTexture = RPUtils.findFirstBlockTextureLocation(manager, leafType.leaves, (s) -> true);
+                        leavesTexture = RPUtils.findFirstBlockTextureLocation(manager, leafType.leaves, LOOKS_LIKE_LEAF_TEXTURE);
                     } catch (Exception exception) {
                         getLogger().warn("Failed to find texture for Leaf Pile {}, using oak one instead", pile);
                         leavesTexture = RPUtils.findFirstBlockTextureLocation(manager, Blocks.OAK_LEAVES, (s) -> true);
@@ -158,7 +159,7 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
 
             String path = type.getNamespace() + "/heavy_" + type.getTypeName() + "_leaf_pile";
 
-            try (TextureImage baseTexture = TextureImage.open(manager, RPUtils.findFirstBlockTextureLocation(manager, type.leaves))) {
+            try (TextureImage baseTexture = TextureImage.open(manager, RPUtils.findFirstBlockTextureLocation(manager, type.leaves, LOOKS_LIKE_LEAF_TEXTURE))) {
 
                 ResourceLocation textureRes = ImmersiveWeathering.res(
                         String.format("block/%s", path));
@@ -233,4 +234,9 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
             LangBuilder.addDynamicEntry(lang, "block.immersive_weathering.leaf_pile", type, leaf);
         });
     }
+
+    public static final Predicate<String> LOOKS_LIKE_LEAF_TEXTURE = s -> {
+        s = new ResourceLocation(s).getPath();
+        return !s.contains("_bushy") && !s.contains("_snow") && !s.contains("_overlay");
+    };
 }
