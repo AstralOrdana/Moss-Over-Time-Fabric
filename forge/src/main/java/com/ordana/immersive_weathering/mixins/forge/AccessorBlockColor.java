@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Mixin({BlockColors.class})
 public interface AccessorBlockColor {
-    @Accessor("f_92571_")
+    @Accessor("blockColors")
     Map<Holder.Reference<Block>, BlockColor> getBlockColors();
 }
 

@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Mixin({ItemColors.class})
 public interface AccessorItemColor {
-    @Accessor("f_92674_")
+    @Accessor("itemColors")
     Map<Holder.Reference<Item>, ItemColor> getItemColors();
 }
 
