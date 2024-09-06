@@ -17,6 +17,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
@@ -115,7 +116,7 @@ public interface Snowy {
                 return;
             }
         }
-        if (level.canSeeSky(pos.above()) && TemperatureManager.canSnowMelt(pos, level)) {
+        if (!level.getBlockState(pos.above()).is(BlockTags.SNOW) && TemperatureManager.canSnowMelt(pos, level)) {
             level.setBlockAndUpdate(pos, unSnowy.get());
         }
     }

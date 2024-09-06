@@ -7,17 +7,9 @@ loom {
 }
 
 dependencies {
-    // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
-    // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    modImplementation("curse.maven:selene-499980:5055462")
+    modImplementation("curse.maven:selene-499980:5619072")
     modImplementation "dev.emi:emi-xplat-intermediary:${rootProject.emi_version}:api"
-   // modImplementation ("net.mehvahdjukaar:moonlight:${rootProject.moonlight_version}")
-    //modCompileOnly("curse.maven:selene-499980:4990524")
-
-    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
-    implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
-    annotationProcessor 'net.fabricmc:sponge-mixin:0.12.5+mixin.0.8.5'
 }
 
 publishing {
@@ -30,5 +22,13 @@ publishing {
 
     repositories {
         // Add repositories to publish to here.
+        maven {
+            name = "TerraformersMC"
+            url = "https://maven.terraformersmc.com/releases"
+        }
     }
+}
+
+repositories {
+    maven { url "https://maven.terraformersmc.com/releases" }
 }
