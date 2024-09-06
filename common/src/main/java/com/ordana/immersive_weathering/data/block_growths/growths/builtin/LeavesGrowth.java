@@ -43,8 +43,7 @@ public class LeavesGrowth extends BuiltinBlockGrowth {
 
         //Drastically reduced this chance to help lag
         //checking if it has these properties because mcreator mods...
-        if ((!state.hasProperty(LeavesBlock.PERSISTENT) || !state.getValue(LeavesBlock.PERSISTENT))
-                && random.nextFloat() < CommonConfigs.LEAF_PILES_CHANCE.get()) {
+        if ((!state.hasProperty(LeavesBlock.PERSISTENT) || !state.getValue(LeavesBlock.PERSISTENT))) {
 
             var leafPile = WeatheringHelper.getFallenLeafPile(state).orElse(null);
             if (leafPile != null && level.getBlockState(pos.below()).isAir()) {
