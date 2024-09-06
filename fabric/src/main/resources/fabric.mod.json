@@ -6,7 +6,7 @@
   "name": "Immersive Weathering",
   "description": "An abundance of new natural systems to make your world feel more alive than ever.",
   "authors": [
-    "Ordana, MehVahdjukaar, Keybounce"
+    "Ordana, MehVahdjukaar, Keyberries, kayla_the_bee"
   ],
 
   "contact": {
@@ -37,7 +37,7 @@
   ],
   "depends": {
     "fabric": "*",
-    "moonlight": ">=1.20-2.7.0",
-    "minecraft": ">=1.20.1"
+    "minecraft": "1.20.1",
+    "moonlight": ">=1.20-2.12.11"
   }
 }
