@@ -4,10 +4,11 @@
   "package": "com.ordana.immersive_weathering.mixins.forge",
   "compatibilityLevel": "JAVA_16",
   "client": [
+    "AccessorBlockColor",
+    "AccessorItemColor"
   ],
   "mixins": [
     "FluidInteractionRegistryMixin",
-
     "SelfRustableMixin",
     "WebMixin"
   ],
