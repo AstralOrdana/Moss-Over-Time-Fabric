@@ -20,25 +20,6 @@ import java.util.Map;
 
 public class IWPlatformStuffImpl {
 
-    /*
-    @SuppressWarnings("unchecked")
-    public static Block createSpecialBlock(IWPlatformStuff.BlockType type, BlockBehaviour.Properties properties, Object... extraParams) {
-        return switch (type) {
-            case RUSTABLE_BLOCK -> new RustableBlock((Rustable.RustLevel) extraParams[0], properties);
-            case RUSTABLE_STAIRS ->
-                    new RustableStairsBlock((Rustable.RustLevel) extraParams[0], (Supplier<Block>) extraParams[1], properties);
-            case RUSTABLE_BARS -> new RustableBarsBlock((Rustable.RustLevel) extraParams[0], properties);
-            case RUSTABLE_DOOR -> new RustableDoorBlock((Rustable.RustLevel) extraParams[0], properties);
-            case RUSTABLE_SLAB -> new RustableSlabBlock((Rustable.RustLevel) extraParams[0], properties);
-            case RUSTABLE_TRAPDOOR -> new RustableTrapdoorBlock((Rustable.RustLevel) extraParams[0], properties);
-            case RUSTABLE_VERTICAL_SLAB ->
-                    new RustableVerticalSlabBlock((Rustable.RustLevel) extraParams[0], properties);
-        };
-    }
-
-     */
-
-
     public static void addExtraFloweryBlocks(ImmutableBiMap.Builder<Block, Block> builder) {
     }
 

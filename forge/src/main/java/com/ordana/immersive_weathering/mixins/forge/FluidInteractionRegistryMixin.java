@@ -19,16 +19,17 @@ public class FluidInteractionRegistryMixin {
     @Inject(method = "canInteract", at = @At("HEAD"), cancellable = true, remap = false)
     private static void immersiveWeatheringDataFluidInteraction(Level level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         BlockState state = level.getBlockState(pos);
-        var f = ((LiquidBlock) state.getBlock()).getFluid();
-        boolean lava = state.getFluidState().is(FluidTags.LAVA);
-        var successPos = FluidGeneratorsHandler.applyGenerators(f,
-                FluidGeneratorsHandler.POSSIBLE_FLOW_DIRECTIONS, pos, level);
-        if (successPos.isPresent()) {
-            if (lava) {
-                level.levelEvent(1501, pos, 0);
-                // FluidBlo.fizz(level, successPos.get().getFirst());
+        if (state.getBlock() instanceof LiquidBlock) {
+            var f = ((LiquidBlock) state.getBlock()).getFluid();
+            boolean lava = state.getFluidState().is(FluidTags.LAVA);
+            var successPos = FluidGeneratorsHandler.applyGenerators(f,
+                    FluidGeneratorsHandler.POSSIBLE_FLOW_DIRECTIONS, pos, level);
+            if (successPos.isPresent()) {
+                if (lava) {
+                    level.levelEvent(1501, pos, 0);
+                }
+                cir.setReturnValue(false);
             }
-            cir.setReturnValue(false);
         }
     }
 

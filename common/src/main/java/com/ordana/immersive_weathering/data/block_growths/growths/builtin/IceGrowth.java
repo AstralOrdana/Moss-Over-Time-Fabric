@@ -4,6 +4,7 @@ import com.ordana.immersive_weathering.blocks.IcicleBlock;
 import com.ordana.immersive_weathering.data.block_growths.TickSource;
 import com.ordana.immersive_weathering.mixins.accessors.IceInvoker;
 import com.ordana.immersive_weathering.reg.ModBlocks;
+import com.ordana.immersive_weathering.util.TemperatureManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -65,7 +66,7 @@ public class IceGrowth extends BuiltinBlockGrowth {
                 float k = pos.getZ() + 0.5f;
                 level.sendParticles(ParticleTypes.LARGE_SMOKE, i, j, k, 12, 0.2D, 0.2D, 0.2D, 0);
                 ice.invokeMelt(state, level, pos);
-            } else if (level.isDay() && !b.get().value().coldEnoughToSnow(pos)) {
+            } else if (TemperatureManager.canSnowMelt(pos, level)) {
                 ice.invokeMelt(state, level, pos);
             }
         }

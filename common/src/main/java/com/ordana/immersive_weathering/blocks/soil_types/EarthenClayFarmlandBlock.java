@@ -104,7 +104,6 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!player.isSecondaryUseActive()) {
-            // empty bucket into mulch
             ItemStack stack = player.getItemInHand(hand);
             if (stack.is(Items.WATER_BUCKET) && state.getValue(MOISTURE) == 0) {
                 level.playSound(player, pos, SoundEvents.BUCKET_EMPTY, SoundSource.BLOCKS, 1.0f, 1.0f);
@@ -116,11 +115,10 @@ public class EarthenClayFarmlandBlock extends ModFarmlandBlock {
                 }
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
-            // fill bucket from mulch
             else if (stack.is(Items.BUCKET) && state.getValue(MOISTURE) > 0) {
                 level.playSound(player, pos, SoundEvents.BUCKET_FILL, SoundSource.BLOCKS, 1.0f, 1.0f);
                 if (player instanceof ServerPlayer) {
-                    ItemStack itemStack2 = ItemUtils.createFilledResult(stack, player, Items.LAVA_BUCKET.getDefaultInstance());
+                    ItemStack itemStack2 = ItemUtils.createFilledResult(stack, player, Items.WATER_BUCKET.getDefaultInstance());
                     player.setItemInHand(hand, itemStack2);
                     level.setBlockAndUpdate(pos, state.setValue(MOISTURE, 0));
                     player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
