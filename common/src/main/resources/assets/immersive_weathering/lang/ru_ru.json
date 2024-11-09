@@ -1,5 +1,5 @@
 {
-  "itemGroup.immersive_weathering.immersive_weathering": "Впечатляющее выветривание",
+  "itemGroup.immersive_weathering.immersive_weathering": "Впечатляющее Выветривание",
   
   "advancements.immersive_weathering.moss.title": "Увековечить этот цикл?",
   "advancements.immersive_weathering.moss.description": "(Вы съели мох.), (На вкус... мшистый.), (Ваше здоровье было покрыто мхом.)",
@@ -342,21 +342,21 @@
   "block.immersive_weathering.cracked_stone_brick_slab": "Плита из потрескавшегося каменного кирпича",
   "block.immersive_weathering.cracked_stone_brick_wall": "Ограда из потрескавшегося каменного кирпича",
 
-  "block.immersive_weathering.cracked_nether_brick_stairs": "Ступеньки из потрескавшихся незерских кирпичей",
-  "block.immersive_weathering.cracked_nether_brick_slab": "Плита из потрескавшихся незерских кирпичей",
-  "block.immersive_weathering.cracked_nether_brick_wall": "Ограда из потрескавшихся незерских кирпичей",
+  "block.immersive_weathering.cracked_nether_brick_stairs": "Ступеньки из потрескавшегося незерского кирпича",
+  "block.immersive_weathering.cracked_nether_brick_slab": "Плита из потрескавшегося незерского кирпича",
+  "block.immersive_weathering.cracked_nether_brick_wall": "Ограда из потрескавшегося незерского кирпича",
 
-  "block.immersive_weathering.cracked_deepslate_brick_stairs": "Ступеньки из потрескавшихся глубинносланцевых кирпичей",
-  "block.immersive_weathering.cracked_deepslate_brick_slab": "Плита из потрескавшихся глубинносланцевых кирпичей",
-  "block.immersive_weathering.cracked_deepslate_brick_wall": "Ограда из потрескавшихся глубинносланцевых кирпичей",
+  "block.immersive_weathering.cracked_deepslate_brick_stairs": "Ступеньки из потрескавшегося глубинносланцевого кирпича",
+  "block.immersive_weathering.cracked_deepslate_brick_slab": "Плита из потрескавшегося глубинносланцевого кирпича",
+  "block.immersive_weathering.cracked_deepslate_brick_wall": "Ограда из потрескавшегося глубинносланцевого кирпича",
 
   "block.immersive_weathering.cracked_deepslate_tile_stairs": "Ступеньки из потрескавшегося глубинносланцевого плитняка",
   "block.immersive_weathering.cracked_deepslate_tile_slab": "Плита из потрескавшегося глубинносланцевого плитняка",
   "block.immersive_weathering.cracked_deepslate_tile_wall": "Ограда из потрескавшегося глубинносланцевого плитняка",
 
-  "block.immersive_weathering.cracked_polished_blackstone_brick_stairs": "Ступеньки из потрескавшихся полированно-чернитных кирпичей",
-  "block.immersive_weathering.cracked_polished_blackstone_brick_slab": "Плита из потрескавшихся полированно-чернитных кирпичей",
-  "block.immersive_weathering.cracked_polished_blackstone_brick_wall": "Ограда из потрескавшихся полированно-чернитных кирпичей",
+  "block.immersive_weathering.cracked_polished_blackstone_brick_stairs": "Ступеньки из потрескавшегося полированно-чернитного кирпича",
+  "block.immersive_weathering.cracked_polished_blackstone_brick_slab": "Плита из потрескавшегося полированно-чернитного кирпича",
+  "block.immersive_weathering.cracked_polished_blackstone_brick_wall": "Ограда из потрескавшегося полированно-чернитного кирпича",
 
   "item.immersive_weathering.mortar": "Строительный раствор",
   "item.immersive_weathering.stone_brick": "Каменный кирпич",
