@@ -136,19 +136,33 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
 
         //bark
         {
-            StaticResource itemModel = StaticResource.getOrLog(manager,
+            StaticResource barkModel = StaticResource.getOrLog(manager,
                     ResType.ITEM_MODELS.getPath(ImmersiveWeathering.res("oak_bark")));
+            StaticResource scaleModel = StaticResource.getOrLog(manager,
+                    ResType.ITEM_MODELS.getPath(ImmersiveWeathering.res("crimson_scales")));
 
             ModItems.BARK.forEach((woodType, bark) -> {
                 if (!woodType.isVanilla() || !PlatHelper.isDev()) {
 
                     String id = Utils.getID(bark).getPath();
-
-                    try {
-                        addSimilarJsonResource(manager,itemModel, "oak_bark", id);
+                    if(id.endsWith("scales")
+                       {
+                                            try {
+                        addSimilarJsonResource(manager,barkModel, "oak_bark", id);
                     } catch (Exception ex) {
                         getLogger().error("Failed to generate Bark item model for {} : {}", bark, ex);
                     }
+                    }
+                    else
+                    {
+                                            try {
+                        addSimilarJsonResource(manager,scaleModel, "crimson_scales", id);
+                    } catch (Exception ex) {
+                        getLogger().error("Failed to generate Scales item model for {} : {}", bark, ex);
+                    }
+                    }
+
+
                 }
             });
         }
