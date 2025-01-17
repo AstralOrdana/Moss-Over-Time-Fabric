@@ -15,6 +15,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -66,7 +67,7 @@ public class IceGrowth extends BuiltinBlockGrowth {
                 float k = pos.getZ() + 0.5f;
                 level.sendParticles(ParticleTypes.LARGE_SMOKE, i, j, k, 12, 0.2D, 0.2D, 0.2D, 0);
                 ice.invokeMelt(state, level, pos);
-            } else if (TemperatureManager.canSnowMelt(pos, level)) {
+            } else if (level.getBrightness(LightLayer.BLOCK, pos) > 11 - state.getLightBlock(level, pos)) {
                 ice.invokeMelt(state, level, pos);
             }
         }

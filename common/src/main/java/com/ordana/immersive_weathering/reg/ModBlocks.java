@@ -344,12 +344,6 @@ public class ModBlocks {
         new SiltBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD)));
     public static final Supplier<Block> SILTY_FARMLAND = regWithItem("silty_farmland", () ->
         new SiltyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD)));
-    /*
-    public static final Supplier<Block> ROOTED_SILT = regWithItem("rooted_silt", () ->
-        new SiltBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD)));
-    public static final Supplier<Block> ROOTED_GRASSY_SILT = regWithItem("rooted_grassy_silt", () ->
-        new SiltBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.MUD)));*/
-
 
     public static final Supplier<Block> SANDY_DIRT = regWithItem("sandy_dirt", () ->
         new SandyDirtBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND)));
@@ -357,12 +351,6 @@ public class ModBlocks {
         new SandyDirtBlockGrassy(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND)));
     public static final Supplier<Block> SANDY_FARMLAND = regWithItem("sandy_farmland", () ->
         new SandyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND)));
-
-    /*
-    public static final Supplier<Block> ROOTED_SANDY_DIRT = regWithItem("rooted_sandy_dirt", () ->
-        new SandyDirtBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND)));
-    public static final Supplier<Block> ROOTED_GRASSY_SANDY_DIRT = regWithItem("rooted_grassy_sandy_dirt", () ->
-        new SandyDirtBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.SAND)));*/
 
     public static final Supplier<Block> EARTHEN_CLAY = regWithItem("earthen_clay", () ->
         new EarthenClayBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.BASALT)));
@@ -375,12 +363,6 @@ public class ModBlocks {
         new LoamBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL)));
     public static final Supplier<Block> LOAMY_FARMLAND = regWithItem("loamy_farmland", () ->
         new LoamyFarmlandBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL)));
-
-    /*
-    public static final Supplier<Block> ROOTED_LOAM = regWithItem("rooted_loam", () ->
-        new LoamBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL)));
-    public static final Supplier<Block> ROOTED_GRASSY_LOAM = regWithItem("rooted_grassy_loam", () ->
-        new LoamBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.GRAVEL)));*/
 
     public static final Supplier<Block> PERMAFROST = regWithItem("permafrost", () ->
         new PermafrostBlock(Properties.copy(Blocks.DIRT).strength(0.5f).sound(SoundType.CALCITE)));

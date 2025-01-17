@@ -167,11 +167,9 @@ public class ImmersiveWeatheringClient {
 
     @EventCalled
     private static void registerBlockColors(ClientHelper.BlockColorEvent event) {
-        ModBlocks.LEAF_PILES.forEach((type, leafPile) -> {
-            event.register((blockState, blockAndTintGetter, blockPos, i) -> {
-                return getLeafTypeColor(event, type, blockState, blockAndTintGetter, blockPos, i);
-            }, leafPile);
-        });
+        ModBlocks.LEAF_PILES.forEach((type, leafPile) ->
+                event.register((blockState, blockAndTintGetter, blockPos, i) ->
+                getLeafTypeColor(event, type, blockState, blockAndTintGetter, blockPos, i), leafPile));
 
         event.register((blockState, level, blockPos, i) -> {
                 if (i == 0) return -1;

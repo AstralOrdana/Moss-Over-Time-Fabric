@@ -34,7 +34,15 @@ public abstract class LeavesMixin extends Block implements BonemealableBlock {
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
-        return state.is(Blocks.FLOWERING_AZALEA_LEAVES);
+        int i = 0;
+        for (var direction : Direction.values()) {
+                var targetPos = pos.relative(direction);
+                BlockState targetBlock = level.getBlockState(targetPos);
+                if (WeatheringHelper.getAzaleaGrowth(targetBlock).isPresent()) i += 1;
+
+        }
+
+        return i > 0;
     }
 
     @Override
