@@ -67,8 +67,6 @@ public class IceGrowth extends BuiltinBlockGrowth {
                 float k = pos.getZ() + 0.5f;
                 level.sendParticles(ParticleTypes.LARGE_SMOKE, i, j, k, 12, 0.2D, 0.2D, 0.2D, 0);
                 ice.invokeMelt(state, level, pos);
-            } else if (level.getBrightness(LightLayer.BLOCK, pos) > 11 - state.getLightBlock(level, pos)) {
-                ice.invokeMelt(state, level, pos);
             }
         }
     }
